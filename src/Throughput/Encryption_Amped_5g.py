@@ -1203,9 +1203,7 @@ def Encryption_Throughput(EncryptionType2g_id= '',EncryptionType2g ='',Encryptio
                            print filename
                            shutil.move(chariot_path+'\\'+str(filename),os.getcwd()+'\\'+str(model_name)+' '+str(match_time)) 
                 
-                    file.close()               
-                    os._exit(1)  
-                
+    
                 
                   except :
                      

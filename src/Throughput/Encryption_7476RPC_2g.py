@@ -372,32 +372,22 @@ def Encryption_Throughput(EncryptionType2g_id= '',EncryptionType2g = '',Encrypti
              if '40' in str(BW_width):
                
               try :
-               Select(driver.find_element_by_name(str(BW_name))).select_by_value('HT40')   
+               Select(driver.find_element_by_name(str(BW_name))).select_by_value('5')   
               except :
                pass   
               try :
-               Select(driver.find_element_by_name(str(BW_name))).select_by_value('VHT40')   
+               Select(driver.find_element_by_name(str(BW_name))).select_by_value('6')   
               except :
                pass 
               
              elif '20' in str(BW_width):
               
               try :
-               Select(driver.find_element_by_name(str(BW_name))).select_by_value('HT20')   
+               Select(driver.find_element_by_name(str(BW_name))).select_by_value('0')   
               except :
                pass   
-            
-              try :
-               Select(driver.find_element_by_name(str(BW_name))).select_by_value('VHT20')   
-              except :
-               pass  
-            
-              try :
-               Select(driver.find_element_by_name(str(BW_name))).select_by_value('20')   
-              except :
-               pass   
-              
-              
+ 
+      
                   
              else :  
               Select(driver.find_element_by_name(str(BW_name))).select_by_visible_text(str(BW_width))
@@ -415,28 +405,8 @@ def Encryption_Throughput(EncryptionType2g_id= '',EncryptionType2g = '',Encrypti
          except :
              pass    
  
-#          try : 
-#              
-#               el = driver.find_element_by_xpath(str(Appy_ID_2))
-#         
-#               webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#               
-#           
-#              
-#          except :
-#               pass    
-#              
-#          time.sleep(int(timesleep))
-#          
-#          driver.close()
-# 
-#          driver = webdriver.Chrome("C:\chromedriver_win32\chromedriver.exe") 
-#          
-#          time.sleep(5) 
-#          
-#          driver.get(DST)
-#         
-#          time.sleep(7)
+
+
           
          time.sleep(int(timesleep))
            
@@ -451,8 +421,7 @@ def Encryption_Throughput(EncryptionType2g_id= '',EncryptionType2g = '',Encrypti
          time.sleep(7)
  
  
- 
-  
+
     
           
          print  Authentication2g   

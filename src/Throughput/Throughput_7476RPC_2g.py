@@ -223,6 +223,25 @@ if __name__ == '__main__':
     Add_path = conf.get('Bridge_ip','Add_path')
 
     Enable_path = conf.get('Bridge_ip','Enable_path')
+    
+    
+    Channel_ID = conf.get ('Channel_ID','channel2g')
+    
+    
+    Appy_ID_1 = conf.get ('Appy_ID','apply1_2g')
+
+    Appy_ID_2 = conf.get ('Appy_ID','apply2_2g')
+        
+    SSID_name = conf.get ('SSID2g','SSID_name')       
+    
+    Band_name = conf.get ('Band_width','BW_2G_ID')
+    
+    BW_name = conf.get('Band_width','Band_Width_2G_ID')
+    
+    WLAN_name = conf.get ('WLAN','name')
+    
+    Time = conf.get('Security_Test_script','Time')
+
 
     
     
@@ -326,775 +345,506 @@ if __name__ == '__main__':
     print channel_range_text
     
     
-#     driver.get(Basic5g_link)    
-#             
-#     
-#     time.sleep(5)
-#         
-#     try :
-#         driver.find_element_by_xpath('//*[@id="wireless_A_plus_G"]/table/tbody/tr/td[2]/input[2]')        
-#     
-#     except:
-#         
-#         pass
-#    
-#     time.sleep(int(timesleep))
-#             
-#         
-#     driver.close() 
-#     
-#     time.sleep(5)
-#     
-#     driver = webdriver.Chrome(chrome_path) 
-#     
-#         
-#     driver.get(Basic2g_link)    
-#             
-#     
-#     time.sleep(5)
-#         
-#     try :
-#         driver.find_element_by_xpath('//*[@id="wireless_A_plus_G"]/table/tbody/tr/td[2]/input[1]')        
-#     
-#     except:
-#         
-#         pass
-#    
-#     time.sleep(int(timesleep))
-            
-        
-    driver.close() 
-    
-#     driver = webdriver.Chrome("C:\chromedriver_win32\chromedriver.exe") 
-#     
-#            
-#     driver.get(DST)
-#     
-#     time.sleep(7)
-#         
-#     driver.find_element_by_link_text("More Settings").click()
-#          
-#     time.sleep(3)
-#     driver.find_element_by_link_text("5GHz Wi-Fi Settings").click()
-#          
-#     time.sleep(3)                     
-#     driver.find_element_by_link_text("Basic Settings").click()
-#          
-#  
-# 
-#     
-#     
-#     time.sleep(7)
-#          
-#          
-#     if not driver.find_element_by_name('wlanDisabled').is_selected() :
-#         
-#         driver.find_element_by_name('wlanDisabled').click()
-#     
-#     else :
-#         pass  
-#     
-#     time.sleep(7)
-#     
-#     el = driver.find_element_by_xpath(str(Appy_ID_1))
-#         
-#     webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#          
-#     time.sleep(3)
-# 
-#    
-#     try :
-#              
-#      el = driver.find_element_by_xpath(str(Appy_ID_2))
-#         
-#      webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#               
-#      time.sleep(int(timesleep))
-#     
-#     except :
-#      pass             
-#     
-#     
-#     
-#     
-#        
-#     
-#     driver.close()
-    
-#     driver = webdriver.Chrome(chrome_path) 
-#     
-#       
-#       
-#     time.sleep(3)
-#               
-#     driver.get(Basic2g)
-#          
-# 
-#     time.sleep(3)
-#     
-# 
-#     
-#              
-#     try :
-#           
-#           SSID_name = conf.get('SSID2g','SSID_name')
-#           
-#              
-#           driver.find_element_by_name(str(SSID_name)).clear()
-#           time.sleep(2)
-#           driver.find_element_by_name(str(SSID_name)).send_keys(str(ssid2g))
-#           
-#           time.sleep(2)
-#           
-#     except:
-#         pass   
-# 
-#     try:  
-#           
-#           Band_name = conf.get('Band_width','BW_2G_ID')
-#           
-#           BW_MODE = conf.get('Band_width','2.4G_Mode13')
-#           
-#           
-#           Select(driver.find_element_by_name(str(Band_name))).select_by_visible_text(str(BW_MODE))
-#                
-#           time.sleep(2)
-#     except:
-#        pass
-#  
-# 
-#     try:
-#         
-#           BW_name = conf.get('Band_width','Band_Width_2G_ID')
-#           
-#           BW_width = conf.get('Band_width','2.4G_BW2')
-#           Select(driver.find_element_by_name(str(BW_name))).select_by_value('5')
-#           
-#           
-# 
-#              
-#           time.sleep(5)
-#              
-#     except:
-#            pass  
-#        
-#     try:
-#         
-#           BW_name = conf.get('Band_width','Band_Width_2G_ID')
-#           
-#           BW_width = conf.get('Band_width','2.4G_BW2')
-#           Select(driver.find_element_by_name(str(BW_name))).select_by_value('6')
-#           
-#           
-# 
-#              
-#           time.sleep(5)
-#              
-#     except:
-#            pass     
-#        
-#        
-#        
-#                 
-#           
-#     el = driver.find_element_by_xpath(str(Appy_ID_1))
-#         
-#     webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#          
-#     time.sleep(3)
-# 
-#     try : 
-#              
-#               el = driver.find_element_by_xpath(str(Appy_ID_2))
-#         
-#               webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#               
-#               time.sleep(3)
-#              
-#     except :
-#               pass    
-#              
-#     time.sleep(int(timesleep))
-#     
-#     driver.close()
-#     
-#     time.sleep(5)
-#     
-#     driver = webdriver.Chrome(chrome_path) 
-#           
-#     time.sleep(5) 
-#           
-#     driver.get(entry2g)
-#          
-#     time.sleep(7)
-#          
-#          
-# 
-#    
-#          
-#     print  Authentication2g   
-#          
-#     print Encryption2g
-#          
-#     try: 
-#          
-#           Authentication2g_id = conf.get('Encryption_Throughput_2g','WPA_Mode')
-#           
-#           Authentication2g = conf.get('Encryption_Throughput_2g','Authentication5')
-#          
-#          
-#           Select(driver.find_element_by_name(str(Authentication2g_id))).select_by_value(str(Authentication2g))
-#                 
-#           time.sleep(1)
-#          
-#     except:
-#           pass
-#          
-#     try:
-#       
-#                         WebDriverWait(driver, 3).until(EC.alert_is_present(),
-#                                                        'Timed out waiting for PA creation ' + 
-#                                                        'confirmation popup to appear.')
-#                     
-#                         alert = driver.switch_to_alert()
-#                         alert_text = alert.text
-#                         print alert.text
-#                         alert.accept()
-#                    
-#                     #    print alert.text
-#                         print "alert accepted"
-#                         pass
-#     except :
-#                         print "no alert"
-#                         pass 
-#                 
-#         
-#         
-#         
-# 
-#          
-#          
-#          
-#          
-# #          driver.find_element_by_xpath(str(Encryption2g_id)).click()
-#          
-#     try :
-#              
-#              Encryption2g_id = conf.get('Encryption_Throughput_2g','WPA_Encryptionmode')
-#              
-#              Encryption2g = conf.get('Encryption_Throughput_2g','Encryption5')
-#              
-#              
-#              Select(driver.find_element_by_name(str(Encryption2g_id))).select_by_value(str(Encryption2g))
-#         
-#                         
-#              time.sleep(1)
-#     except :
-#              
-#              pass
-#          
-#          
-#          
-#          
-#          
-#          
-#     try :    
-#              
-#              EncryptionType2g_id = conf.get('Encryption_Throughput_2g','WPA_EncryptionType')
-#              
-#              EncryptionType2g = conf.get('Encryption_Throughput_2g','Type5')
-#              
-#              
-#              Select(driver.find_element_by_name(str(EncryptionType2g_id))).select_by_value(str(EncryptionType2g))
-#                     
-#              time.sleep(1)
-#     except:
-#              pass
-#          
-#          
-#          
-#          
-#           
-#          
-#     try :    
-#              
-#              KeyFormat2g_id = conf.get('Encryption_Throughput_2g','WPA_psk')
-#              
-#              KeyFormat2g = conf.get('Encryption_Throughput_2g','Key Format5')
-#                     
-#              
-#   
-#              Select(driver.find_element_by_name(str(KeyFormat2g_id))).select_by_value(str(KeyFormat2g))
-#              time.sleep(1)
-#     except :
-#              pass
-#                     
-#             
-# 
-#          
-#              
-#     try:
-#       
-#                         WebDriverWait(driver, 3).until(EC.alert_is_present(),
-#                                                        'Timed out waiting for PA creation ' + 
-#                                                        'confirmation popup to appear.')
-#                     
-#                         alert = driver.switch_to_alert()
-#                         alert_text = alert.text
-#                         print alert.text
-#                         alert.accept()
-#                    
-#                     #    print alert.text
-#                         print "alert accepted"
-#                         pass
-#     except :
-#                         print "no alert"
-#                         pass 
-#              
-#     try :  
-#              
-#              PresharedKey2g_id = conf.get('Encryption_Throughput_2g','WPA_key')
-#              
-#              PresharedKey2g = conf.get('Encryption_Throughput_2g','Pre-shared Key5')
-#              
-#                       
-#              driver.find_element_by_name(str(PresharedKey2g_id)).clear()
-#                     
-#              time.sleep(1)
-#                     
-#              driver.find_element_by_name(str(PresharedKey2g_id)).send_keys(str(PresharedKey2g))
-#                     
-#              time.sleep(1)
-#        
-#     except :
-#              
-#              pass
-#   
-# 
-#              
-#     time.sleep(5)
-#              
-# 
-#           
-#             
-#     try :   
-#               
-#              el = driver.find_element_by_xpath(str(Appy_ID_1))
-#             
-#              webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#              
-#              time.sleep(3)
-#              
-#     except :
-#              pass   
-#          
-#          
-#          
-#     try:
-#       
-#                         WebDriverWait(driver, 3).until(EC.alert_is_present(),
-#                                                        'Timed out waiting for PA creation ' + 
-#                                                        'confirmation popup to appear.')
-#                     
-#                         alert = driver.switch_to_alert()
-#                         alert_text = alert.text
-#                         print alert.text
-#                         alert.accept()
-#                    
-#                     #    print alert.text
-#                         print "alert accepted"
-#                         pass
-#     except :
-#                         print "no alert"
-#                         pass 
-#          
-#          
-# 
-#          
-#          
-#          
-#     time.sleep(int(timesleep))
-# 
-#     
-#     driver.close()    
-#     driver.get(DST)    
-#     
-#     time.sleep(3)
-#     
-#     driver.find_element_by_link_text("More Settings").click()
-#          
-#     time.sleep(3)
-#     driver.find_element_by_link_text("Network Settings").click()
-#          
-#     time.sleep(3)                      
-#     driver.find_element_by_link_text("Bridge Mode").click()
-#            
-# 
-#     time.sleep(3)
-#     
-#     
-#     if not driver.find_element_by_name("enabled").is_selected() :
-#          
-#         driver.find_element_by_name("enabled").click()
-#      
-#     else :
-#         pass   
-#  
-#  
-#     
-#     try :
-#     
-#      driver.find_element_by_name("input").click()
-#     
-#      time.sleep(int(timesleep))
-#     except :
-#      pass  
-#  
-#     
-#     driver.switch_to_window(driver.window_handles[-1])
-#     
-#     time.sleep(3)
-#    
-#     
-#     driver.find_element_by_xpath("//*[@id='AddTbl']/tbody/tr[2]/td[1]/input").click()
-#     
-#     time.sleep(3)
-#    
-#  
-#  
-#     
-#     driver.find_element_by_id("done").click()
-#     
-#     time.sleep(3)
-# 
-#     
-#     driver.switch_to_window(driver.window_handles[0])
-#     
-#     time.sleep(3)
-#     
-#          
-#     
-#     try :
-#           
-#      SSID_name = conf.get('Bridge_ip','Bridge_SSID')
-#           
-#              
-#      driver.find_element_by_name(str(SSID_name)).clear()
-#      time.sleep(2)
-#      driver.find_element_by_name(str(SSID_name)).send_keys(str(ssid2g))
-#           
-#      time.sleep(2)
-#   
-#     except :
-#       pass 
-#   
-#     
-#     
-#     try :
-#           
-#      Security = conf.get('Bridge_ip','Security')
-#      
-#      PresharedKey2g = conf.get('Encryption2g','Pre-shared Key5')
-#           
-#              
-#      driver.find_element_by_name(str(Security)).clear()
-#      time.sleep(2)
-#      driver.find_element_by_name(str(Security)).send_keys(str(PresharedKey2g))
-#           
-#      time.sleep(2)
-#   
-#     except :
-#       pass 
-#   
-#   
-#     
-#   
-#     
-#     try :
-#           
-#      Bridge_Manual_IP = conf.get('Bridge_ip','Bridge_Manual_IP')
-#           
-#              
-#      driver.find_element_by_xpath(str(Bridge_Manual_IP)).click()
-# 
-#           
-#      time.sleep(2)
-#   
-#     except :
-#       pass  
-#   
-#   
-#   
-#   
-#     
-#     try :
-#           
-#      IP_name = conf.get('Bridge_ip','IP_name')
-#           
-#              
-#      driver.find_element_by_name(str(IP_name)).clear()
-#      time.sleep(2)
-#      driver.find_element_by_name(str(IP_name)).send_keys(str(Bridge_IP))
-#           
-#      time.sleep(2)
-#   
-#     except :
-#       pass 
-#     
-#   
-#     
-#     try :
-#           
-#      mask = conf.get('Bridge_ip','mask')
-#      
-#      mask_value = conf.get('Bridge_ip','mask_value')
-#           
-#              
-#      driver.find_element_by_name(str(mask)).clear()
-#      time.sleep(2)
-#      driver.find_element_by_name(str(mask)).send_keys(str(mask_value))
-#           
-#      time.sleep(2)
-#   
-#     except :
-#       pass 
-#       
-#     
-#     
-#     try :
-#           
-#      Gateway = conf.get('Bridge_ip','Gateway')
-#              
-#              
-#      driver.find_element_by_name(str(Gateway)).clear()
-#      time.sleep(2)
-#      driver.find_element_by_name(str(Gateway)).send_keys(str(DUT_IP))
-#           
-#      time.sleep(2)
-#   
-#     except :
-#       pass 
-#     
-#     
-#     
-#     try :    
-#         driver.switch_to_default_content()
-#         time.sleep(3)
-#         driver.find_element_by_css_selector("div.hover_icon_container > a > img").click()
-#         time.sleep(3)
-#         driver.find_element_by_css_selector("img").click()  
-#         time.sleep(3)   
-#            
-#     except :
-#          pass          
-#            
-#            
-#            
-#     time.sleep(int(timesleep)) 
-
-
-#     time.sleep(3)
-#          
-#          
-#     driver.get(entry2g)
-#          
-#          
-#          
-#     time.sleep(2) 
-#     
-#     try :
-#     
-#      driver.switch_to_frame("SSIDAuthMode")
-#         
-#    
-#      time.sleep(2)
-#      
-#     except :
-#       pass     
-#          
-#     print  Authentication2g   
-#          
-#     print Encryption2g
-#          
-#     try: 
-#           
-#           Authentication2g_id = conf.get('Encryption2g','WPA_Mode')
-#           
-#           Authentication2g = conf.get('Encryption2g','Authentication5')
-#           
-#           Select(driver.find_element_by_name(str(Authentication2g_id))).select_by_value(str(Authentication2g))
-#                 
-#           time.sleep(1)
-#          
-#     except:
-#           pass
-#          
-#     try:
-#       
-#                         WebDriverWait(driver, 3).until(EC.alert_is_present(),
-#                                                        'Timed out waiting for PA creation ' + 
-#                                                        'confirmation popup to appear.')
-#                     
-#                         alert = driver.switch_to_alert()
-#                         alert_text = alert.text
-#                         print alert.text
-#                         alert.accept()
-#                    
-#                     #    print alert.text
-#                         print "alert accepted"
-#                         pass
-#     except :
-#                         print "no alert"
-#                         pass 
-#                 
-#          
-#     try : 
-#              Encryption2g_id = conf.get('Encryption2g','WPA_Encryptionmode')
-#              
-#              Encryption2g = conf.get('Encryption2g','Encryption5')
-#          
-#          
-#              Select(driver.find_element_by_name(str(Encryption2g_id))).select_by_value(str(Encryption2g))
-#                     
-#              time.sleep(1)
-#     except:
-#              pass
-#          
-#     try :    
-#              
-#              KeyFormat2g_id = conf.get('Encryption2g','WPA_psk')
-#              
-#              KeyFormat2g = conf.get('Encryption2g','Key Format5')
-#              
-#                     
-#              Select(driver.find_element_by_name(str(KeyFormat2g_id))).select_by_value(str(KeyFormat2g))
-#              time.sleep(1)
-#     except :
-#              pass
-#                     
-#     try :    
-#              
-#              EncryptionType2g_id = conf.get('Encryption2g','WPA_EncryptionType')
-#              
-#              EncryptionType2g = conf.get('Encryption2g','Type5')
-#              
-#              
-#              Select(driver.find_element_by_name(str(EncryptionType2g_id))).select_by_value(str(EncryptionType2g))
-#                     
-#              time.sleep(1)
-#     except:
-#              pass
-#              
-#     try:
-#       
-#                         WebDriverWait(driver, 3).until(EC.alert_is_present(),
-#                                                        'Timed out waiting for PA creation ' + 
-#                                                        'confirmation popup to appear.')
-#                     
-#                         alert = driver.switch_to_alert()
-#                         alert_text = alert.text
-#                         print alert.text
-#                         alert.accept()
-#                    
-#                     #    print alert.text
-#                         print "alert accepted"
-#                         pass
-#     except :
-#                         print "no alert"
-#                         pass 
-#              
-#     try :           
-#              
-#              PresharedKey2g_id = conf.get('Encryption2g','WPA_key')
-#              
-#              PresharedKey2g = conf.get('Encryption2g','Pre-shared Key5')
-#              
-#              
-#              driver.find_element_by_name(str(PresharedKey2g_id)).clear()
-#                     
-#              time.sleep(1)
-#                     
-#              driver.find_element_by_name(str(PresharedKey2g_id)).send_keys(str(PresharedKey2g))
-#                     
-#              time.sleep(1)
-#        
-#     except :
-#              
-#              pass
-#   
-# 
-#              
-#     time.sleep(5)
-#              
-#             
-#     try :          
-#      el = driver.find_element_by_xpath(str(Appy_ID_1))
-#         
-#      webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#          
-#      time.sleep(3)
-#     
-#     except :
-#      pass    
-# 
-#     try : 
-#              
-#               el = driver.find_element_by_xpath(str(Appy_ID_2))
-#         
-#               webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
-#               
-#               time.sleep(int(timesleep))
-#              
-#     except :
-#               pass  
-#           
-#           
-#     try :    
-#         driver.switch_to_default_content()
-#         time.sleep(3)
-#         driver.find_element_by_css_selector("div.hover_icon_container > a > img").click()
-#         time.sleep(3)
-#         driver.find_element_by_css_selector("div.hover_icon_container > a > img").click()
-#         time.sleep(3)
-#         driver.find_element_by_css_selector("img").click()
-#         time.sleep(3)
-#         driver.find_element_by_css_selector("img").click()  
-#         time.sleep(3)   
-#           
-#     except :
-#          pass      
-#           
-#     time.sleep(int(timesleep)) 
-#            
-#          
-#     try:
-#       
-#                         WebDriverWait(driver, 3).until(EC.alert_is_present(),
-#                                                        'Timed out waiting for PA creation ' + 
-#                                                        'confirmation popup to appear.')
-#                     
-#                         alert = driver.switch_to_alert()
-#                         alert_text = alert.text
-#                         print alert.text
-#                         alert.accept()
-#                    
-#                     #    print alert.text
-#                         print "alert accepted"
-#                         pass
-#     except :
-#                         print "no alert"
-#                         pass 
-#          
-#          
-#          
-#          
-#       
-#          
-#              
-#     time.sleep(4)
      
+              
+       
+    time.sleep(5)
+            
+    driver.get(Basic2g)
+       
+    
+    time.sleep(4)
+           
+    try :
+           
+       driver.find_element_by_name(str(SSID_name)).clear()
+       time.sleep(4)
+       driver.find_element_by_name(str(SSID_name)).send_keys(str(ssid2g))
+        
+       time.sleep(4)
+        
+    except:
+        pass   
+    
+    try :
+        
+       BW_MODE = conf.get('Band_width','2.4G_Mode13') 
+       
+       Select(driver.find_element_by_name(str(Band_name))).select_by_visible_text(str(BW_MODE))
+        
+        
+       time.sleep(2)
+       
+    except:
+       pass     
+    
 
     
+    try :
+          BW_width = conf.get('Band_width','2.4G_BW2')
+       
+          chan_band_width = driver.find_element_by_name(str(BW_name))
+           
+          print str(format(chan_band_width.text))
+      
+          chan_band_width = re.findall('\d{,2}\s[a-zA-Z]{,3}',str(format(chan_band_width.text)))
+            
+          print chan_band_width
+           
+          print chan_band_width[1]
+           
+          if '40' in str(BW_width):
+            
+           try :
+            Select(driver.find_element_by_name(str(BW_name))).select_by_value('5')   
+           except :
+            pass   
+           try :
+            Select(driver.find_element_by_name(str(BW_name))).select_by_value('6')   
+           except :
+            pass 
+           
+          elif '20' in str(BW_width):
+           
+           try :
+            Select(driver.find_element_by_name(str(BW_name))).select_by_value('0')   
+           except :
+            pass   
+   
+            
+          else :  
+           Select(driver.find_element_by_name(str(BW_name))).select_by_visible_text(str(BW_width))
+       
+    except :
+          pass
+              
+    try : 
+          el = driver.find_element_by_xpath(str(Appy_ID_1))
+          
+          webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
+           
+          time.sleep(3)
+           
+    except :
+          pass    
+    
+ 
+    time.sleep(int(timesleep))
+        
+    driver.close()
+    
+    driver = webdriver.Chrome(chrome_path) 
+        
+    time.sleep(5) 
+        
+    driver.get(entry2g)
+       
+    time.sleep(5)
+    
+
+       
+    try: 
+        
+       Authentication2g_id = conf.get ('Encryption_Throughput_2g','WPA_Mode') 
+       
+       Authentication2g = conf.get ('Encryption_Throughput_2g','Authentication5')
+       
+       Select(driver.find_element_by_name(str(Authentication2g_id))).select_by_value(str(Authentication2g))
+              
+       time.sleep(1)
+       
+    except:
+       pass
+       
+    try:
+    
+                     WebDriverWait(driver, 3).until(EC.alert_is_present(),
+                                                    'Timed out waiting for PA creation ' + 
+                                                    'confirmation popup to appear.')
+                  
+                     alert = driver.switch_to_alert()
+                     alert_text = alert.text
+                     print alert.text
+                     alert.accept()
+                 
+                 #    print alert.text
+                     print "alert accepted"
+                     pass
+    except :
+                     print "no alert"
+                     pass 
+              
+      
+      
+      
+    try :    
+           
+           
+          Encryptionmode2g = conf.get('Encryption_Throughput_2g','WPA_Encryptionmode')
+           
+          driver.find_element_by_xpath(str(Encryptionmode2g)).click()
+                      
+          time.sleep(1)
+    except :
+          pass
+       
+       
+       
+       
+    
+    try :
+        
+          EncryptionType2g = conf.get('Encryption_Throughput_2g','WPA_EncryptionType')
+        
+          driver.find_element_by_xpath(str(EncryptionType2g)).click()
+                          
+          time.sleep(1)
+    except :
+          pass
+       
+       
+       
+    try :
+          
+          Encryption2g_id = conf.get ('Encryption_Throughput_2g','WPA_Encryptionmode')
+          
+          Encryption2g = conf.get ('Encryption_Throughput_2g','Encryption5')
+           
+           
+          Select(driver.find_element_by_name(str(Encryption2g_id))).select_by_value(str(Encryption2g))
+      
+                      
+          time.sleep(1)
+    except :
+           
+          pass
+       
+        
+       
+    try :    
+        
+          KeyFormat2g_id = conf.get ('Encryption_Throughput_2g','WPA_psk')
+          
+          KeyFormat2g = conf.get ('Encryption_Throughput_2g','Key Format5')
+                  
+          Select(driver.find_element_by_name(str(KeyFormat2g_id))).select_by_value(str(KeyFormat2g))
+          time.sleep(1)
+    except :
+          pass
+                  
+          
+    
+       
+           
+    try:
+    
+                     WebDriverWait(driver, 3).until(EC.alert_is_present(),
+                                                    'Timed out waiting for PA creation ' + 
+                                                    'confirmation popup to appear.')
+                  
+                     alert = driver.switch_to_alert()
+                     alert_text = alert.text
+                     print alert.text
+                     alert.accept()
+                 
+                 #    print alert.text
+                     print "alert accepted"
+                     pass
+    except :
+                     print "no alert"
+                     pass 
+           
+    try :   
+          
+          PresharedKey2g_id = conf.get ('Encryption_Throughput_2g','WPA_key')
+          
+          PresharedKey2g = conf.get ('Encryption_Throughput_2g','Pre-shared Key5')
+        
+        
+                
+          driver.find_element_by_name(str(PresharedKey2g_id)).clear()
+                  
+          time.sleep(1)
+                  
+          driver.find_element_by_name(str(PresharedKey2g_id)).send_keys(str(PresharedKey2g))
+                  
+          time.sleep(1)
+     
+    except :
+           
+          pass
+    
+    
+           
+    time.sleep(5)
+           
+    
+       
+       
+    try :   
+            
+          el = driver.find_element_by_xpath(str(Appy_ID_1))
+          
+          webdriver.ActionChains(driver).move_to_element(el).click(el).perform() 
+           
+          time.sleep(3)
+           
+    except :
+          pass   
+       
+       
+       
+    try:
+    
+                     WebDriverWait(driver, 3).until(EC.alert_is_present(),
+                                                    'Timed out waiting for PA creation ' + 
+                                                    'confirmation popup to appear.')
+                  
+                     alert = driver.switch_to_alert()
+                     alert_text = alert.text
+                     print alert.text
+                     alert.accept()
+                 
+                 #    print alert.text
+                     print "alert accepted"
+                     pass
+    except :
+                     print "no alert"
+                     pass 
+            
+    
+        
+        
+        
+        
+    time.sleep(int(timesleep)) 
+        
+    driver.close()
+      
+      
+    driver = webdriver.Chrome(chrome_path) 
+        
+        
+    driver.get(BridegeMode)
+        
+    time.sleep(40)
+        
+    try :
+      
+          for p in range(1,25,1):
+              
+            
+              i = driver.find_element_by_xpath("//*[@id='table_11g']/tbody/tr["+str(p)+"]/td[3]")
+                                               
+                                               
+              print format(i.text)   
+              
+              g = format(i.text) 
+              
+                          
+              
+              if g == str(ssid2g) :
+                  
+                  print 'find !!!'
+                  
+                  print p
+                  
+                  
+                  driver.find_element_by_xpath("//*[@id='table_11g']/tbody/tr["+str(p)+"]/td[1]/input").click()
+                  
+                  time.sleep(5)
+                  
+           
+                  
+                  break
+                  
+              else :
+                  
+                  print 'Not find !!!!'
+                  
+                  pass    
+      
+    except :
+          
+          pass
+              
+    try :
+      
+          driver.find_element_by_xpath("//*[@id='next_but']/td/img[2]").click()  
+                  
+          time.sleep(5)  
+          
+    except :
+          
+          pass
+            
+      
+    try :
+      
+      
+          WebDriverWait(driver, 3).until(EC.alert_is_present(),
+                                        'Timed out waiting for PA creation ' + 
+                                        'confirmation popup to appear.')
+     
+          alert = driver.switch_to_alert()
+          alert_text = alert.text
+          print alert.text
+          
+          h = alert.text
+          
+    except :
+          
+          pass    
+      
+    time.sleep(5)
+      
+    try :
+      
+          if h == 'Please select one entry to connect!' :
+              
+              print 'Repeat scan !!!'
+              
+              driver.close()
+              
+              driver = webdriver.Chrome(chrome_path) 
+                
+                
+              driver.get(BridegeMode)
+                
+              time.sleep(40)
+              
+        
+              
+              for p in range(1,25,1):
+                  
+     
+                
+                  i = driver.find_element_by_xpath("//*[@id='table_11g']/tbody/tr["+str(p)+"]/td[3]")
+                                             
+                  print format(i.text)   
+                  
+                  g = format(i.text) 
+                  
+                              
+                  
+                  if g == str(ssid2g) :
+                      
+                      print 'find !!!'
+                      
+                      print p
+                      
+              
+                      
+                      driver.find_element_by_xpath("//*[@id='table_11g']/tbody/tr["+str(p)+"]/td[1]/input").click()
+                      
+                      time.sleep(5)
+                      
+               
+                      
+                      break
+                      
+                  else :
+                      
+                      print 'Not find !!!!'
+                      
+                      pass    
+                  
+          else :
+              
+              print 'scan pass !!'
+              
+              pass    
+      
+    except :
+          
+          pass
+      
+      
+          
+    try :
+      
+          driver.find_element_by_xpath("//*[@id='next_but']/td/img[2]").click()  
+                  
+          time.sleep(5)    
+      
+    except :
+          
+          pass
+      
+      
+    try :
+      
+          driver.find_element_by_xpath("//*[@id='wepkey1_tr']/td/input").send_keys(str(PresharedKey2g)) 
+                  
+          time.sleep(5)    
+      
+    except :
+          
+          pass
+      
+      
+      
+    try :
+      
+          driver.find_element_by_xpath("//*[@id='pskValue_tr']/td/input").send_keys(str(PresharedKey2g)) 
+                  
+          time.sleep(5)    
+      
+    except :
+          
+          pass
+      
+      
+      
+      
+    try :
+      
+          driver.find_element_by_xpath("//*[@id='password_btn']/tbody/tr/td/input").click()  
+                  
+          time.sleep(5)    
+      
+    except :
+          
+          pass
+      
+      
+    try :
+      
+          driver.find_element_by_xpath("//*[@id='password_btn']/tbody/tr/td/input").click()  
+                  
+          time.sleep(5)    
+      
+    except :
+          
+          pass
+      
+      
+
+      
+    print 'Connect successfully !!!'
+      
+      
+    time.sleep(80)
+      
+    driver.close()
+      
+    time.sleep(3)
+      
+    driver = webdriver.Chrome(chrome_path) 
+           
+      
+    time.sleep(3)
+            
+    driver.get(DST+"/logout.html")
+      
+    time.sleep(3)
+      
+    driver.close()
+    
+  
+    
+    
+
     
    
         

@@ -990,7 +990,7 @@ if __name__ == '__main__':
                           
                  print str(test_script)
                  print 'Please wait 1 min 30 secs ....'
-                 cmd ='runtst -v '+ str(test_script)+'.tst'+' -t '+str(Time)  
+                 cmd ='runtst -v '+ str(test_script)+'.tst' 
                  print cmd
                  pingPopen = subprocess.Popen(args= str(cmd), shell=True, stdout=subprocess.PIPE)
                  pingstring = pingPopen.stdout.read()

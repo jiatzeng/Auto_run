@@ -353,6 +353,8 @@ if __name__ == '__main__':
        
     
     time.sleep(4)
+    
+  
            
     try :
            
@@ -890,7 +892,23 @@ if __name__ == '__main__':
                     print "no alert"
                     pass 
          
-         
+        
+        time.sleep(3)
+        
+        try :
+        
+            i = driver.find_element_by_name(str(BW_name))
+        
+            options = [x for x in i.find_elements_by_tag_name("option")] #this part is cool, because it searches the elements contained inside of select_box and then adds them to the list options if they have the tag name "options"
+       
+            print options[-1].get_attribute("value")
+            
+            u =  options[-1].get_attribute("value")
+                
+            Select(driver.find_element_by_name(str(BW_name))).select_by_value(u)   
+        except :
+            
+            pass
              
              
                  
@@ -1009,7 +1027,7 @@ if __name__ == '__main__':
                               
                      print str(test_script)
                      print 'Please wait 1 min 30 secs ....'
-                     cmd ='runtst -v '+ str(test_script)+'.tst'+' -t '+str(Time)  
+                     cmd ='runtst -v '+ str(test_script)+'.tst' 
                      print cmd
                      pingPopen = subprocess.Popen(args= str(cmd), shell=True, stdout=subprocess.PIPE)
                      pingstring = pingPopen.stdout.read()
